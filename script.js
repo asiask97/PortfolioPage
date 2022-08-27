@@ -37,3 +37,111 @@ document.addEventListener('mousemove', evt => {
     root.style.setProperty('--mouse-x', x);
     root.style.setProperty('--mouse-y', y);
 });
+
+
+document.getElementById('main-container').addEventListener('scroll', () => {
+  const main = document.getElementById('main-container')
+  const aboutSection = document.getElementById('about-section')
+  const projectSection = document.getElementById('project-section')
+  const contactSection = document.getElementById('contact-section')
+  
+  const topAboutToTopViewport = aboutSection.getBoundingClientRect().top;
+  const topProjectToTopViewport = projectSection.getBoundingClientRect().top;
+  const topContactToTopViewport = contactSection.getBoundingClientRect().top;
+  
+  const clientHeight =  document.documentElement.clientHeight
+
+  //If user is in hero scetion
+  if(main.scrollTop.toFixed() == 0){
+    console.log('hero')
+    changeDots(document.getElementById('dotOne'))
+  }
+  //About section 
+  if(topAboutToTopViewport.toFixed() < (clientHeight -(clientHeight/2)) && topAboutToTopViewport >= 0 ){
+    console.log('about')
+    changeDots(document.getElementById('dotTwo'))
+  }
+  //Project Section
+  if(topProjectToTopViewport.toFixed() < (clientHeight -(clientHeight/2)) && topProjectToTopViewport >= 0){
+    console.log('project')
+    changeDots(document.getElementById('dotThree'))
+
+  }
+  //Contact Section
+  if(topContactToTopViewport.toFixed() < (clientHeight -(clientHeight/2)) && topContactToTopViewport >= 0){
+    console.log('conatct')
+    changeDots(document.getElementById('dotFour'))
+
+  }
+
+})
+
+function changeDots(filled){
+  const dots = document.querySelectorAll('.dot')
+  dots.forEach(element => {
+    if(element == filled) element.innerHTML = '<circle cx="8" cy="8" r="8"/>'
+    else element.innerHTML = '<path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path>'
+  });
+}
+
+
+function moveToSelected(element) {
+
+  if (element == "next") {
+    var selected = document.querySelector(".selected").nextElementSibling;
+  } else if (element == "prev") {
+    var selected = document.querySelector(".selected").previousElementSibling;
+  } else {
+    var selected = element.parentElement;
+  }
+  console.log(selected.nextElementSibling)
+  var next = selected.nextElementSibling;
+  var prev = selected.previousElementSibling;
+  var prevSecond = prev.previousElementSibling;
+  var nextSecond = next.nextElementSibling;
+
+  console.log(selected, selected.classList)
+  selected.className = ''
+  selected.classList.add("selected");
+  selected.classList.add("card");
+
+  prev.className = ''
+  prev.classList.add("prev");
+  prev.classList.add("card");
+
+  next.className = ''
+  next.classList.add("next");
+  next.classList.add("card");
+
+  if(nextSecond){
+    nextSecond.className = ''
+    nextSecond.classList.add("nextRightSecond");
+    nextSecond.classList.add("card");
+  }
+
+  if(prevSecond){
+    prevSecond.className = ''
+    prevSecond.classList.add("prevLeftSecond");
+    prevSecond.classList.add("card");
+  }
+
+}
+
+const cards = document.querySelectorAll('.card');
+cards.forEach(element => {
+  element.addEventListener('click', e =>{
+    if(e.target.tagName == 'IMG'){
+      moveToSelected(e.target)
+
+    }else{
+      moveToSelected(e.target.parentElement)
+    }
+  })
+});
+
+document.getElementById('prev').addEventListener('click', e =>{
+  moveToSelected('prev')
+})
+document.getElementById('next').addEventListener('click', e =>{
+  moveToSelected('next')
+})
