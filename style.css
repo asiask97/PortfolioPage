@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+@media only screen and (min-width: 1200px) {
 html,
 body {
   height: 100%;
@@ -11,7 +12,6 @@ body {
 body{
     color: white;
     scroll-behavior: smooth;
-    background-color: black;
     font-family: 'Roboto', sans-serif;
 
 }
@@ -51,13 +51,14 @@ nav ul{
     width: 60vw;
 }
 nav ul li{
+    color: white;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
 nav ul li:hover{
-    color: rgb(148, 192, 243);
+    color: rgb(236, 125, 51);
 }
 nav #socials{
     display: flex;
@@ -74,7 +75,7 @@ nav #socials svg{
 }
 
 nav #socials svg:hover{
-    fill: rgb(148, 192, 243);
+    fill: rgb(236, 125, 51);
 }
 
 /* NAVIGATION DOTS */
@@ -138,18 +139,101 @@ nav #socials svg:hover{
         0 0 7px rgba(255, 255, 255, 0.459),
         0 0 10px rgba(255, 255, 255, 0.658),
         0 0 21px rgba(255, 255, 255, 0.726),
-        0 0 42px rgb(122, 153, 170),
-        0 0 82px rgb(0, 174, 255),
-        0 0 92px rgb(31, 63, 104),
-        0 0 102px rgb(44, 43, 105),
-        0 0 400px rgb(8, 10, 83);
+        0 0 42px rgb(170, 153, 122),
+        0 0 82px rgb(255, 238, 0),
+        0 0 92px rgb(104, 78, 31),
+        0 0 102px rgb(105, 66, 43),
+        0 0 400px rgb(83, 44, 8);
+}
+#hero-content button{
+    margin-top: 2em;
+}
+#hero-content a{
+    text-decoration: none;
 }
 
+/* ABOUT ME SECTION */
 
+#about-section{
+    background-color: #ebebeb;
+    color: #000;
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    justify-items: center;
+    align-items: center;
+}
+#about-content{
+    background: url(./assets/images/bg.mp4) no-repeat;
+    max-height: 60vh;
+    position: relative;
+}
+#about-text{
+    margin-top: 10em;
+    z-index: 50 !important;
+    position: relative;
+    margin-left: 1em;
+}
+#about-content h1{
+    font-weight: 100;
+    font-size: 3em;
+    margin: 1em 1em -1em 1em;
+    color: #fa6400 ;
+    z-index: 50 !important;
+    position: relative;
+}
+#about-section img{
+    border: #fa6400 solid 3px;
+    position: relative;
+    shape-outside: circle();
+    float: right;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    transition: ease-in-out 0.5s;
+    margin: 1em;
+}
+
+#lists{
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+
+}
+.list{
+    border-right: #000 solid 1px;
+    margin-left: 3em;
+}
+#about-section ul{
+    list-style-type: circle;
+    margin-top: 0.5em;
+}
+#about-section li{
+    margin-left: 1em;    
+}
+#about-section button{
+    margin-top: 2em;
+}
+#buttons{
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    margin-bottom: 2em;
+}
+video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+    filter: grayscale(70%);
+}
 /* PROJECT SECTION */
 
 #project-section{
-    background-color: rgb(43, 43, 46);
+    background-color: rgb(15, 15, 17);
     display: grid;
     grid-template-rows: 20% 80%;
     height: 100vh;
@@ -159,7 +243,6 @@ nav #socials svg:hover{
     justify-self: center;
 }
 #project-section .projectIntro h1{
-
     font-weight: 100;
     font-size: 3em;
     margin-left: 4em;
@@ -173,7 +256,7 @@ nav #socials svg:hover{
 #project-section #carousel{
     position: relative;
     height: 700px;
-    width: 90vw;
+    width: 89vw;
     top: 50%;
     transform: translateY(-50%);
     overflow: hidden;
@@ -214,7 +297,7 @@ nav #socials svg:hover{
 }
 
 
-#project-section button{
+button{
   align-items: center;
   background-clip: padding-box;
   background-color: #fa6400;
@@ -242,17 +325,17 @@ nav #socials svg:hover{
   vertical-align: baseline;
   width: auto;
 }
-#project-section button:hover,
-#project-section button:focus {
+button:hover,
+button:focus {
   background-color: #fb8332;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
-#project-section button:hover {
+button:hover {
   transform: translateY(-1px);
 }
 
-#project-section button:active {
+button:active {
   background-color: #c85000;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
@@ -323,4 +406,358 @@ nav #socials svg:hover{
     position: relative;
     left: 0vw;
     bottom: -220px;
+}
+
+/* CONTACT ME SECTION */
+#contact-section{
+    background-color: #ebebeb;
+    display: grid;
+    color: #000;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 30% 50% 20%;
+    width: 100%;
+}
+#contact-section h1{
+    color:rgb(236, 125, 51);
+    font-weight: 100;
+    font-size: 3em;
+    margin-bottom: 2em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+input{
+    height: 3vh;
+}
+textarea{
+    height: 10vh;
+}
+#submit{
+    height: 2vh;
+    background-color: #c85000;
+    border: none;
+    color: white;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+#conatct-socials{
+    border-top: #c85000 1px solid;
+    margin-top: 5em;
+    padding-top: 2em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#conatct-socials svg, #conatct-socials p{
+    display: inline;
+}
+
+#conatct-socials a{
+    text-decoration: none;
+    color: #000;
+}
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /*NAV SECTION*/
+    nav{
+        font-size: 0.8em;
+    }
+    #navigation-dots svg{
+        width: 0.7em;
+        height: 0.7em;
+    }
+    #navigation-dots{
+        left:5vw
+    }
+    /*HERO SECTION*/
+    #hero-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1em;
+        width: 75%;
+    }
+    #hero-content p{
+        font-size: 0.9em;
+    }
+    #hero-section #typeText{
+        font-size: 1.8em;
+    }
+
+    /*ABOUT ME SECTION*/
+    #about-section{
+        grid-template-columns: 15% 83% 2%;
+    }
+    #about-section img{
+        width: 100px;
+        height: 100px;
+        border: #fa6400 solid 2px;
+        grid-column: 2/3;
+        margin: 0;
+        justify-self: center;
+        align-self: center;
+
+    }
+    #about-content{
+        max-height:100vh ;
+        height: 90vh;
+        margin-top: 3em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #about-content p{
+       font-size: 0.8em;
+    }
+
+    #about-content li{
+        font-size: 0.8em;
+    }
+    #about-content h5{
+        font-size: 0.8em;
+    }
+    .list{
+        margin-left: 1em;
+    }
+    #about-content h1{
+        font-size: 1.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0;
+    }
+    #about-text{
+        margin-top: 0em;
+        margin-left: 1em;
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    button{
+        margin-top: 1em;
+        font-size: 12px;
+        min-height: 1rem;
+    }
+    #buttons {
+        margin-top: 0em;
+        margin-bottom: 0em;
+
+    }
+    /*PROJECT SECTION*/
+    #project-section{
+        grid-template-rows: 15% 75%;
+        font-size: 0.8em;
+    }
+    #carousel .cardContent{
+        width:200px;
+    }
+    #project-section #carousel{
+        width: 94vw;
+        height: 65vh;
+    }
+    #carousel img{
+        width: 2px;
+    }
+    .selected img, .selected div{
+        width: 250px !important;
+    }
+    .prevLeftSecond, .nextRightSecond{
+        display: none;
+    }
+    .next, .prev{
+        opacity: 0.1 !important;
+    }
+    .selected {
+        display: inline;
+    }
+    .buttons{
+        bottom: -6vh;
+    }
+    #carousel button{
+        padding: 1em;
+    }
+    #project-section .projectIntro {
+        justify-self: center;
+    }
+    #project-section .projectIntro h1{
+        font-weight: 100;
+        font-size: 2em;
+        margin: 0;
+    }
+    /*CONTACT ME SECTION*/
+    #contact-section{
+        grid-template-columns: 6% 88% 6%;
+    }
+    #contact-section h1{
+        font-size: 1.5em;
+    }
+    input{
+        height: 4vh;
+    }
+    textarea{
+        height: 15vh;
+    }
+    #submit{
+        height: 4vh;
+    }
+    .contact{
+        width: 70vw;
+    }
+    #conatct-socials{
+        margin-top: 2em;
+        flex-direction: column;
+        gap: 1EM;
+    }
+    
+}
+/* Small devices (portrait tablets and large phones, 600px and up)*/
+@media only screen and (min-width: 600px) {
+    /*NAV SECTION*/
+    nav{
+        font-size: 0.8em;
+    }
+    #navigation-dots svg{
+        width: 0.7em;
+        height: 0.7em;
+    }
+    #navigation-dots{
+        left:5vw
+    }
+    /*HERO SECTION*/
+
+    #hero-content{
+        font-size: 1.5em;
+    }
+
+    #hero-section #typeText{
+        font-size: 1.5em;
+    }
+
+    /*ABOUT ME SECTION*/
+    #about-section{
+        grid-template-columns: 15% 83% 2%;
+    }
+    #about-section img{
+        width: 250px;
+        height: 250px;
+        border: #fa6400 solid 2px;
+        margin: 2em;
+
+    }
+    #about-content{
+        max-height:100vh;
+        padding-bottom: 4em;
+        margin-top: 3em;
+    }
+    #about-content p{
+       font-size: 1em;
+    }
+    #about-content li{
+        font-size: 1em;
+    }
+    #about-content h5{
+        font-size: 1em;
+    }
+    .list{
+        margin-left: 1.5em;
+    }
+    #about-content h1{
+        font-size: 3em;
+        margin-left: 0.5em;
+        margin-bottom: 1em;
+    }
+    #about-text{
+        margin-top: 0em;
+        margin-left: 1em;
+    }
+
+    /*PROJECT SECTION*/
+    #project-section{
+        grid-template-rows: 15% 75%;
+        font-size: 0.8em;
+    }
+    #carousel .cardContent{
+        width:300px;
+    }
+    #project-section #carousel{
+        width: 94vw;
+        height: 50vh;
+    }
+    #carousel img{
+        width: 2px;
+    }
+    .selected img, .selected div{
+        width: 300px !important;
+    }
+    .prevLeftSecond, .nextRightSecond{
+        display: none;
+    }
+    .next, .prev{
+        opacity: 0.1 !important;
+    }
+    .selected {
+        display: inline;
+    }
+    .buttons{
+        bottom: -6vh;
+    }
+    #carousel button{
+        padding: 0.5em;
+    }
+    #project-section .projectIntro {
+        justify-self: center;
+    }
+    #project-section .projectIntro h1{
+        font-weight: 100;
+        font-size: 3em;
+        margin: 0;
+    }
+    /*CONTACT ME SECTION*/
+    #contact-section{
+        grid-template-columns: 6% 88% 6%;
+    }
+    #contact-section h1{
+        font-size: 3em;
+    }
+    input{
+        height: 4vh;
+    }
+    textarea{
+        height: 15vh;
+    }
+    #submit{
+        height: 4vh;
+    }
+    .contact{
+        width: 70vw;
+    }
+    #conatct-socials{
+        margin-top: 2em;
+        flex-direction: column;
+        gap: 1EM;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+    
+
+
+
+@media only screen and (min-width: 2100px){
+
 }

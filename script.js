@@ -55,23 +55,26 @@ document.getElementById('main-container').addEventListener('scroll', () => {
   if(main.scrollTop.toFixed() == 0){
     console.log('hero')
     changeDots(document.getElementById('dotOne'))
+    changeColor('white')
   }
   //About section 
   if(topAboutToTopViewport.toFixed() < (clientHeight -(clientHeight/2)) && topAboutToTopViewport >= 0 ){
     console.log('about')
     changeDots(document.getElementById('dotTwo'))
+    changeColor('black')
   }
   //Project Section
   if(topProjectToTopViewport.toFixed() < (clientHeight -(clientHeight/2)) && topProjectToTopViewport >= 0){
     console.log('project')
     changeDots(document.getElementById('dotThree'))
+    changeColor('white')
 
   }
   //Contact Section
   if(topContactToTopViewport.toFixed() < (clientHeight -(clientHeight/2)) && topContactToTopViewport >= 0){
     console.log('conatct')
     changeDots(document.getElementById('dotFour'))
-
+    changeColor('black')
   }
 
 })
@@ -84,7 +87,33 @@ function changeDots(filled){
   });
 }
 
-
+function changeColor(color){
+  const dots = document.querySelectorAll('.dot')
+  const navBar = document.querySelectorAll('.navbar')
+  const socials = document.querySelectorAll('.social')
+  if(color == 'black'){
+    dots.forEach(element => {
+      element.setAttribute("fill", "black")
+    });
+    socials.forEach(element => {
+      element.setAttribute("fill", "black")
+    });
+    navBar.forEach(element => {
+      element.style.color = 'black'
+    });
+  }
+  else{
+    dots.forEach(element => {
+      element.setAttribute("fill", "white")
+    });
+    socials.forEach(element => {
+      element.setAttribute("fill", "white")
+    });
+    navBar.forEach(element => {
+      element.style.color = 'white'
+    });
+  }
+}
 function moveToSelected(element) {
 
   if (element == "next") {
