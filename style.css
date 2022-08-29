@@ -14,6 +14,9 @@ body{
     font-family: 'Roboto', sans-serif;
 
 }
+a{
+    text-decoration: none;
+}
 ::-webkit-scrollbar{
     display: none;
 }
@@ -630,6 +633,9 @@ textarea{
     .selected img, .selected div{
         width: 400px !important;
     }
+    .buttons{
+        bottom: -12vh;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -645,6 +651,9 @@ textarea{
     #conatct-socials{
         margin-top: 5em;
         flex-direction: row;
+    }
+    #project-section{
+        font-size: 1em;
     }
 }
 
