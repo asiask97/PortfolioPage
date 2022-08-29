@@ -34,6 +34,7 @@ body{
 
 /* NAVIGATION */
 nav{
+    font-size: 0.8em;
     align-self:flex-start;
     width: 100vw;
     display: flex;
@@ -64,8 +65,8 @@ nav #socials{
     justify-content: center;
 }
 nav #socials svg{
-    width: 1.5em;
-    height: 1.5em;
+    width: 1em;
+    height: 1em;
     margin-left: 3em;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
@@ -81,7 +82,7 @@ nav #socials svg:hover{
 #navigation-dots{
     position: fixed;
     top: 48vh;
-    left:10vw
+    left: 5vw;
 }
 #navigation-dots #dots-container{
     display: flex;
@@ -89,8 +90,8 @@ nav #socials svg:hover{
 
 }
 #navigation-dots svg{
-    width: 0.5vw;
-    height: 0.5vw;
+    width: 0.5em;
+    height: 0.5em;
     margin-top: 10px;
 }
 .hide{
@@ -108,18 +109,23 @@ nav #socials svg:hover{
 }
 #hero-content{
     font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+    width: 75%;
 }
 #hero-content h1{
     font-size: 1.5em;
 }
 #hero-content p{
     width: 50vw;
-    font-size: 0.7em;
+    font-size: 0.9em;
     margin-top: 2em
 }
 #hero-section #typeText{
     font-family: 'Pacifico', cursive;
-    font-size: 3em;
+    font-size: 1.8em;
 }
 
 #typeText::after {
@@ -157,39 +163,51 @@ nav #socials svg:hover{
     background-color: #ebebeb;
     color: #000;
     display: grid;
-    grid-template-columns: 30% 50% 20%;
+    grid-template-columns: 15% 83% 2%;
     justify-items: center;
     align-items: center;
 }
 #about-content{
     background: url(./assets/images/bg.mp4) no-repeat;
-    max-height: 60vh;
     position: relative;
+    max-height:100vh ;
+    height: 90vh;
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
 }
 #about-text{
-    margin-top: 10em;
     z-index: 50 !important;
     position: relative;
+    margin-top: 0em;
     margin-left: 1em;
+    grid-column: 1/3;
+    grid-row: 2/3;
 }
 #about-content h1{
     font-weight: 100;
-    font-size: 3em;
-    margin: 1em 1em -1em 1em;
     color: #fa6400 ;
     z-index: 50 !important;
     position: relative;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    margin-bottom: 0;
+    justify-self: center;
+    align-self: center;
 }
 #about-section img{
-    border: #fa6400 solid 3px;
     position: relative;
     shape-outside: circle();
     float: right;
-    width: 500px;
-    height: 500px;
     border-radius: 50%;
     transition: ease-in-out 0.5s;
-    margin: 1em;
+    width: 100px;
+    height: 100px;
+    border: #fa6400 solid 2px;
+    grid-column: 2/3;
+    margin: 0;
+    justify-self: center;
+    align-self: center;
 }
 
 #lists{
@@ -201,25 +219,34 @@ nav #socials svg:hover{
 }
 .list{
     border-right: #000 solid 1px;
-    margin-left: 3em;
+    margin-left: 1em;
 }
 #about-section ul{
     list-style-type: circle;
     margin-top: 0.5em;
 }
 #about-section li{
-    margin-left: 1em;    
+    margin-left: 1em;   
+    font-size: 0.8em;
+}
+#about-content h5{
+    font-size: 0.8em;
 }
 #about-section button{
     margin-top: 2em;
 }
+button{
+    margin-top: 1em;
+    font-size: 12px;
+    min-height: 1rem;
+}
 #buttons{
-    margin-top: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2%;
-    margin-bottom: 2em;
+    margin-top: 0em;
+    margin-bottom: 0em;
 }
 video{
     width: 100%;
@@ -229,12 +256,17 @@ video{
     z-index: 0;
     filter: grayscale(70%);
 }
+
+#about-content p{
+    font-size: 0.8em;
+}
 /* PROJECT SECTION */
 
 #project-section{
     background-color: rgb(15, 15, 17);
     display: grid;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 15% 75%;
+    font-size: 0.8em;
     height: 100vh;
 }
 #project-section .projectIntro {
@@ -243,19 +275,20 @@ video{
 }
 #project-section .projectIntro h1{
     font-weight: 100;
-    font-size: 3em;
-    margin-left: 4em;
+    font-size: 2em;
+    margin: 0;
 }
 
 #project-carousel{
     justify-self: end;
     height: 70vh;
+    margin-top: 1.5em;
 }
 
 #project-section #carousel{
     position: relative;
-    height: 700px;
-    width: 89vw;
+    width: 92vw;
+    height: 70vh;
     top: 50%;
     transform: translateY(-50%);
     overflow: hidden;
@@ -270,7 +303,7 @@ video{
 }
 #carousel .cardContent{
     padding: 1em;
-    width:400px;
+    width:200px;
     color: #000;
     transition: width 0.5s; 
 }
@@ -308,12 +341,12 @@ button{
   cursor: pointer;
   display: inline-flex;
   font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
+  font-size: 11px;
   font-weight: 600;
   justify-content: center;
   line-height: 1.25;
   margin: 0;
-  min-height: 3rem;
+  min-height: 1rem;
   padding: calc(.875rem - 1px) calc(1.5rem - 1px);
   position: relative;
   text-decoration: none;
@@ -342,7 +375,7 @@ button:active {
 
 #carousel img{
     border-radius: 10%;
-    width: 400px;
+    width: 2px;
     transition: width 0.5s; 
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
@@ -376,9 +409,10 @@ button:active {
     z-index: 10;
     left: 50%;
     transform: translateY(0px) translateX(-50%);
+    display: inline;
 }
 .selected img, .selected div{
-    width: 550px !important;
+    width: 250px !important;
 }
 
 .next{
@@ -387,7 +421,12 @@ button:active {
     transform: translateY(50px) translateX(-50%);
     opacity: .9 !important;
 }
-
+.prevLeftSecond, .nextRightSecond{
+    display: none;
+}
+.next, .prev{
+    opacity: 0.1 !important;
+}
 .nextRightSecond{
     z-index: 4;
     left: 85%;
@@ -404,7 +443,11 @@ button:active {
     justify-content: center;
     position: relative;
     left: 0vw;
-    bottom: -220px;
+    bottom: -2vh;
+}
+
+#carousel button{
+    padding: 1em;
 }
 
 /* CONTACT ME SECTION */
@@ -414,13 +457,13 @@ button:active {
     color: #000;
     align-items: center;
     justify-items: center;
-    grid-template-columns: 30% 50% 20%;
+    grid-template-columns: 6% 88% 6%;
     width: 100%;
 }
 #contact-section h1{
     color:rgb(236, 125, 51);
     font-weight: 100;
-    font-size: 3em;
+    font-size: 1.5em;
     margin-bottom: 2em;
 }
 
@@ -431,13 +474,13 @@ form{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 input{
-    height: 3vh;
+    height: 4vh;
 }
 textarea{
-    height: 10vh;
+    height: 15vh;
 }
 #submit{
-    height: 2vh;
+    height: 4vh;
     background-color: #c85000;
     border: none;
     color: white;
@@ -445,7 +488,7 @@ textarea{
 .contact{
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 70vw;
 }
 #conatct-socials{
     border-top: #c85000 1px solid;
@@ -453,6 +496,9 @@ textarea{
     padding-top: 2em;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 2em;
+    flex-direction: column;
+    gap: 1em;
 }
 
 #conatct-socials svg, #conatct-socials p{
@@ -465,179 +511,38 @@ textarea{
 }
 
 
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    /*NAV SECTION*/
-    nav{
-        font-size: 0.8em;
-    }
-    #navigation-dots svg{
-        width: 0.7em;
-        height: 0.7em;
-    }
-    #navigation-dots{
-        left:5vw
-    }
-    /*HERO SECTION*/
-    #hero-content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 1em;
-        width: 75%;
-    }
-    #hero-content p{
-        font-size: 0.9em;
-    }
-    #hero-section #typeText{
-        font-size: 1.8em;
-    }
-
-    /*ABOUT ME SECTION*/
-    #about-section{
-        grid-template-columns: 15% 83% 2%;
-    }
-    #about-section img{
-        width: 100px;
-        height: 100px;
-        border: #fa6400 solid 2px;
-        grid-column: 2/3;
-        margin: 0;
-        justify-self: center;
-        align-self: center;
-
-    }
-    #about-content{
-        max-height:100vh ;
-        height: 90vh;
-        margin-top: 3em;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    #about-content p{
-       font-size: 0.8em;
-    }
-
-    #about-content li{
-        font-size: 0.8em;
-    }
-    #about-content h5{
-        font-size: 0.8em;
-    }
-    .list{
-        margin-left: 1em;
-    }
-    #about-content h1{
-        font-size: 1.5em;
-        margin-left: 0.5em;
-        margin-bottom: 0;
-    }
-    #about-text{
-        margin-top: 0em;
-        margin-left: 1em;
-        grid-column: 1/3;
-        grid-row: 2/3;
-    }
-
-    button{
-        margin-top: 1em;
-        font-size: 12px;
-        min-height: 1rem;
-    }
-    #buttons {
-        margin-top: 0em;
-        margin-bottom: 0em;
-
-    }
-    /*PROJECT SECTION*/
-    #project-section{
-        grid-template-rows: 15% 75%;
-        font-size: 0.8em;
-    }
-    #carousel .cardContent{
-        width:200px;
-    }
-    #project-section #carousel{
-        width: 94vw;
-        height: 65vh;
-    }
-    #carousel img{
-        width: 2px;
-    }
-    .selected img, .selected div{
-        width: 250px !important;
-    }
-    .prevLeftSecond, .nextRightSecond{
-        display: none;
-    }
-    .next, .prev{
-        opacity: 0.1 !important;
-    }
-    .selected {
-        display: inline;
-    }
-    .buttons{
-        bottom: -6vh;
-    }
-    #carousel button{
-        padding: 1em;
-    }
-    #project-section .projectIntro {
-        justify-self: center;
-    }
-    #project-section .projectIntro h1{
-        font-weight: 100;
-        font-size: 2em;
-        margin: 0;
-    }
-    /*CONTACT ME SECTION*/
-    #contact-section{
-        grid-template-columns: 6% 88% 6%;
-    }
-    #contact-section h1{
-        font-size: 1.5em;
-    }
-    input{
-        height: 4vh;
-    }
-    textarea{
-        height: 15vh;
-    }
-    #submit{
-        height: 4vh;
-    }
-    .contact{
-        width: 70vw;
-    }
-    #conatct-socials{
-        margin-top: 2em;
-        flex-direction: column;
-        gap: 1EM;
-    }
-    
-}
 /* Small devices (portrait tablets and large phones, 600px and up)*/
 @media only screen and (min-width: 600px) {
     /*NAV SECTION*/
     nav{
-        font-size: 0.8em;
+        font-size: 1em;
     }
     #navigation-dots svg{
-        width: 0.7em;
-        height: 0.7em;
+        width: 1.5em;
+        height: 1.5em;
     }
-    #navigation-dots{
-        left:5vw
+    #navigation-dots svg{
+        width: 0.8em;
+        height: 0.8em;
     }
+
     /*HERO SECTION*/
 
     #hero-content{
         font-size: 1.5em;
+        display: static;
+        align-items: start;
+        width: auto;
     }
 
     #hero-section #typeText{
         font-size: 1.5em;
+    }
+    #hero-section p{
+        font-size: 0.7em;
+    }
+    button{
+        font-size: 15px;
     }
 
     /*ABOUT ME SECTION*/
@@ -648,11 +553,11 @@ textarea{
         width: 250px;
         height: 250px;
         border: #fa6400 solid 2px;
-        margin: 2em;
-
+        margin: 1em;
     }
-    #about-content{
-        max-height:100vh;
+    #about-content{    
+        display: inline;
+        max-height: 55em;
         padding-bottom: 4em;
         margin-top: 3em;
     }
@@ -672,6 +577,7 @@ textarea{
         font-size: 3em;
         margin-left: 0.5em;
         margin-bottom: 1em;
+        margin: 1em;
     }
     #about-text{
         margin-top: 0em;
@@ -688,78 +594,82 @@ textarea{
     }
     #project-section #carousel{
         width: 94vw;
-        height: 50vh;
+        height: 40em;
     }
     #carousel img{
-        width: 2px;
+        width: 200px;
     }
     .selected img, .selected div{
         width: 300px !important;
     }
-    .prevLeftSecond, .nextRightSecond{
-        display: none;
-    }
-    .next, .prev{
-        opacity: 0.1 !important;
-    }
-    .selected {
-        display: inline;
-    }
     .buttons{
-        bottom: -6vh;
+        bottom: -12em;
     }
-    #carousel button{
-        padding: 0.5em;
-    }
-    #project-section .projectIntro {
-        justify-self: center;
-    }
-    #project-section .projectIntro h1{
-        font-weight: 100;
-        font-size: 3em;
-        margin: 0;
+    #project-section h1{
+        font-size: 3em !important;
     }
     /*CONTACT ME SECTION*/
-    #contact-section{
-        grid-template-columns: 6% 88% 6%;
-    }
+
     #contact-section h1{
         font-size: 3em;
     }
-    input{
-        height: 4vh;
-    }
-    textarea{
-        height: 15vh;
-    }
-    #submit{
-        height: 4vh;
-    }
-    .contact{
-        width: 70vw;
-    }
-    #conatct-socials{
-        margin-top: 2em;
-        flex-direction: column;
-        gap: 1EM;
-    }
+
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
+    /*PROJECT SECTION*/
+    #carousel img{
+        width: 300px;
+    }
+    #project-section #carousel{
+        height: 50em;
+    }
+    .buttons{
+        bottom: -6em;
+    }
+    .selected img, .selected div{
+        width: 400px !important;
+    }
 }
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+    /*ABOUT ME SECTION*/
+    #about-section{
+        grid-template-columns: 30% 50% 20%;
+    }
+    nav #socials svg{
+        width: 1.5em;
+        height: 1.5em;
+    }
+    #conatct-socials{
+        margin-top: 5em;
+        flex-direction: row;
+    }
 }
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+    .prevLeftSecond, .nextRightSecond{
+        display: inline;
+        opacity: 0.2 !important;
+    }
+    .next, .prev{
+        opacity: 0.9 !important;
+    }
 
-
+    #hero-content h1{
+        font-size: 3em;
+    }
+    #hero-section #typeText{
+        font-size: 3.5em;
+    }
+    #project-section .projectIntro h1{
+        margin-left: 2.5em;
+    }
 }
-@media only screen and (min-width: 2100px){
-    #contact-section{
-        background-color: rgb(106, 18, 117);
+@media only screen and (min-width: 1400px){
+    #about-content h1{    
+        margin-top: 3.5em;
     }
 }
