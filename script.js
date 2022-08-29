@@ -53,26 +53,22 @@ document.getElementById('main-container').addEventListener('scroll', () => {
 
   //If user is in hero scetion
   if(main.scrollTop.toFixed() == 0){
-    console.log('hero')
     changeDots(document.getElementById('dotOne'))
     changeColor('white')
   }
   //About section 
   if(topAboutToTopViewport.toFixed() < (clientHeight -(clientHeight/2)) && topAboutToTopViewport >= 0 ){
-    console.log('about')
     changeDots(document.getElementById('dotTwo'))
     changeColor('black')
   }
   //Project Section
   if(topProjectToTopViewport.toFixed() < (clientHeight -(clientHeight/2)) && topProjectToTopViewport >= 0){
-    console.log('project')
     changeDots(document.getElementById('dotThree'))
     changeColor('white')
 
   }
   //Contact Section
   if(topContactToTopViewport.toFixed() < (clientHeight -(clientHeight/2)) && topContactToTopViewport >= 0){
-    console.log('conatct')
     changeDots(document.getElementById('dotFour'))
     changeColor('black')
   }
@@ -123,13 +119,11 @@ function moveToSelected(element) {
   } else {
     var selected = element.parentElement;
   }
-  console.log(selected.nextElementSibling)
   var next = selected.nextElementSibling;
   var prev = selected.previousElementSibling;
   var prevSecond = prev.previousElementSibling;
   var nextSecond = next.nextElementSibling;
 
-  console.log(selected, selected.classList)
   selected.className = ''
   selected.classList.add("selected");
   selected.classList.add("card");
