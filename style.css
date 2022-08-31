@@ -176,8 +176,9 @@ nav #socials svg:hover{
     max-height:100vh ;
     height: 90vh;
     margin-top: 3em;
-    display: grid;
-    grid-template-columns: 1fr 0.5fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #about-text{
     z-index: 50 !important;
@@ -211,6 +212,7 @@ nav #socials svg:hover{
     margin: 0;
     justify-self: center;
     align-self: center;
+    margin-right: 0.5em;
 }
 
 #lists{
@@ -651,11 +653,6 @@ textarea{
     }
     #about-section p{
         font-size: 0.8em !important;
-    }
-    #about-content{
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 }
 
