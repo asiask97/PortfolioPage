@@ -553,8 +553,8 @@ textarea{
         grid-template-columns: 15% 83% 2%;
     }
     #about-section img{
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         border: #fa6400 solid 2px;
         margin: 1em;
     }
@@ -563,9 +563,6 @@ textarea{
         max-height: 55em;
         padding-bottom: 4em;
         margin-top: 3em;
-    }
-    #about-content p{
-       font-size: 1em;
     }
     #about-content li{
         font-size: 1em;
@@ -620,21 +617,23 @@ textarea{
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    /*PROJECT SECTION*/
-    #carousel img{
-        width: 300px;
-    }
     #project-section #carousel{
-        height: 50em;
+        height: 100%;
     }
     .buttons{
-        bottom: -6em;
+        bottom: 0em;
     }
     .selected img, .selected div{
-        width: 400px !important;
+        width: 300px !important;
     }
     .buttons{
-        bottom: 5vh;
+        bottom: 0vh;
+    }    
+    #carousel img{
+        width: 250px;
+    }
+    #about-section p{
+        font-size: 0.8em !important;
     }
 }
 
@@ -643,6 +642,13 @@ textarea{
     /*ABOUT ME SECTION*/
     #about-section{
         grid-template-columns: 30% 50% 20%;
+        max-height: 100vh;
+    }
+    #about-section h1{
+        margin: 0.5em;
+    }
+    #about-section p{
+        font-size: 0.8em;
     }
     nav #socials svg{
         width: 1.5em;
@@ -655,6 +661,11 @@ textarea{
     #project-section{
         font-size: 1em;
     }
+
+    #about-section img{
+        width: 250px;
+        height: 250px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -666,7 +677,9 @@ textarea{
     .next, .prev{
         opacity: 0.9 !important;
     }
-
+    #about-section p{
+        font-size: 1em;
+    }
     #hero-content h1{
         font-size: 3em;
     }
@@ -675,6 +688,12 @@ textarea{
     }
     #project-section .projectIntro h1{
         margin-left: 2.5em;
+    }
+    .selected img, .selected div{
+        width: 400px !important;
+    }  
+    #carousel img{
+        width: 300px;
     }
 }
 @media only screen and (min-width: 1400px){
