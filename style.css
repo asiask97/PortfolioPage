@@ -400,14 +400,13 @@ button:active {
     z-index: 5 ;
     left: 30%;
     transform: translateY(50px) translateX(-50%);
-    opacity: .9 !important;
 }
 
 .prevLeftSecond{
     z-index: 4;
     left: 15%;
     transform: translateY(50%) translateX(-50%);
-    opacity: 0.7 !important;
+    opacity: 0.0 !important;
 }
 
 .selected{
@@ -424,7 +423,6 @@ button:active {
     z-index: 5;
     left: 70%;
     transform: translateY(50px) translateX(-50%);
-    opacity: .9 !important;
 }
 .prevLeftSecond, .nextRightSecond{
     display: none;
@@ -690,7 +688,7 @@ textarea{
         opacity: 0.0 !important;
     }
     .next, .prev{
-        opacity: 0.9 !important;
+        opacity: 0.1 !important;
     }
     #about-section p{
         font-size: 1em;
