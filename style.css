@@ -652,6 +652,11 @@ textarea{
     #about-section p{
         font-size: 0.8em !important;
     }
+    #about-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -703,10 +708,10 @@ textarea{
         margin-left: 2.5em;
     }
     .selected img, .selected div{
-        width: 550px !important;
+        width: 350px !important;
     }  
     .next img, .prev img, .next div, .prev div{
-        width: 500px !important;
+        width: 300px !important;
     }  
     #carousel img{
         width: 300px;
@@ -716,9 +721,20 @@ textarea{
         height: 200px;
     }
 }
-}
-@media only screen and (min-width: 1400px){
-    #about-content h1{    
-        margin-top: 3.5em;
+
+@media only screen and (min-height: 880px) {
+  
+    .selected img, .selected div{
+        width: 550px !important;
+    }  
+    .next img, .prev img, .next div, .prev div{
+        width: 550px !important;
+    }  
+    #carousel img{
+        width: 400px;
     }
+}
+
+@media only screen and (min-width: 1400px){
+
 }
