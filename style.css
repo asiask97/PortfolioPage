@@ -545,7 +545,8 @@ textarea{
         font-size: 0.7em;
     }
     button{
-        font-size: 15px;
+        font-size: 10px;
+        width: 13em;
     }
 
     /*ABOUT ME SECTION*/
@@ -553,8 +554,8 @@ textarea{
         grid-template-columns: 15% 83% 2%;
     }
     #about-section img{
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         border: #fa6400 solid 2px;
         margin: 1em;
     }
@@ -565,10 +566,10 @@ textarea{
         margin-top: 3em;
     }
     #about-content li{
-        font-size: 1em;
+        font-size: 0.8em;
     }
     #about-content h5{
-        font-size: 1em;
+        font-size: 0.8em;
     }
     .list{
         margin-left: 1.5em;
@@ -583,6 +584,9 @@ textarea{
         margin-top: 0em;
         margin-left: 1em;
     }
+    #about-section button{
+        margin-top: 0.5em;
+    }
 
     /*PROJECT SECTION*/
     #project-section{
@@ -590,7 +594,20 @@ textarea{
         font-size: 0.8em;
     }
     #carousel .cardContent{
-        width:300px;
+        width: 550px !important;
+        display: flex;
+        flex-direction: column;        
+        align-items: center;
+        justify-content: center;
+    }
+    #carousel .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #carousel .cardButton{
+        margin: 0;
     }
     #project-section #carousel{
         width: 94vw;
@@ -603,10 +620,13 @@ textarea{
         width: 300px !important;
     }
     .buttons{
-        bottom: -12em;
+        bottom: 0em;
     }
     #project-section h1{
         font-size: 3em !important;
+    }
+    .prevLeftSecond, .nextRightSecond{
+        opacity: 0.0 !important;
     }
     /*CONTACT ME SECTION*/
 
@@ -625,10 +645,7 @@ textarea{
     }
     .selected img, .selected div{
         width: 300px !important;
-    }
-    .buttons{
-        bottom: 0vh;
-    }    
+    }  
     #carousel img{
         width: 250px;
     }
@@ -659,20 +676,16 @@ textarea{
         flex-direction: row;
     }
     #project-section{
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
-    #about-section img{
-        width: 250px;
-        height: 250px;
-    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .prevLeftSecond, .nextRightSecond{
         display: inline;
-        opacity: 0.2 !important;
+        opacity: 0.0 !important;
     }
     .next, .prev{
         opacity: 0.9 !important;
@@ -690,11 +703,19 @@ textarea{
         margin-left: 2.5em;
     }
     .selected img, .selected div{
-        width: 400px !important;
+        width: 550px !important;
+    }  
+    .next img, .prev img, .next div, .prev div{
+        width: 500px !important;
     }  
     #carousel img{
         width: 300px;
     }
+    #about-section img{
+        width: 200px;
+        height: 200px;
+    }
+}
 }
 @media only screen and (min-width: 1400px){
     #about-content h1{    
